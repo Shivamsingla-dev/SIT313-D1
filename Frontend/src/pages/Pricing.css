@@ -1,0 +1,204 @@
+/* Pricing page */
+.pricing-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    color: #222;
+}
+
+.pricing-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.pricing-heading h1 {
+    font-size: 2.3rem;
+    margin-bottom: 12px;
+}
+
+.pricing-heading p {
+    color: #666;
+    font-size: 1.05rem;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    padding: 32px;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.pricing-card h2 {
+    margin-top: 0;
+}
+
+.pricing-price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.pricing-price span {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #666;
+}
+
+.pricing-card ul {
+    padding-left: 20px;
+    line-height: 2.2;
+    margin-bottom: 28px;
+}
+
+.paid-plan {
+    border: 2px solid #2563eb;
+}
+
+.pricing-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pricing-button:hover {
+    background: #1d4ed8;
+}
+
+/* Upgrade modal */
+.upgrade-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.upgrade-modal {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 32px;
+    border-radius: 14px;
+    background: #fff;
+    color: #222;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.upgrade-modal h2 {
+    margin-top: 0;
+    padding-right: 28px;
+}
+
+.upgrade-modal>p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.upgrade-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    border: none;
+    background: transparent;
+    color: #333;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.upgrade-modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upgrade-modal label {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.upgrade-modal input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font: inherit;
+}
+
+.upgrade-modal .upgrade-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.upgrade-modal .upgrade-row>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upgrade-modal form>button[type="submit"] {
+    padding: 13px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 7px;
+    background: #008c95;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.upgrade-modal form>button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.upgrade-modal .upgrade-error {
+    color: #b91c1c;
+}
+
+/* Responsive layout */
+@media (max-width: 650px) {
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-heading h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .upgrade-modal {
+        padding: 24px 20px;
+    }
+
+    .upgrade-modal .upgrade-row {
+        grid-template-columns: 1fr;
+    }
+}

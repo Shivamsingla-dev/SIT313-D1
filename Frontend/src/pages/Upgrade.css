@@ -1,0 +1,99 @@
+.upgrade-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    color: #222;
+}
+
+.upgrade-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 32px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.upgrade-card h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.upgrade-card>p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.upgrade-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upgrade-card label {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.upgrade-card input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font: inherit;
+}
+
+.upgrade-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.upgrade-row>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-note {
+    color: #666;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 12px 0;
+}
+
+.upgrade-error {
+    color: #b91c1c;
+    font-size: 0.95rem;
+}
+
+.upgrade-card button {
+    padding: 13px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.upgrade-card button:hover {
+    background: #1d4ed8;
+}
+
+.upgrade-card button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+    .upgrade-card {
+        padding: 22px;
+    }
+
+    .upgrade-row {
+        grid-template-columns: 1fr;
+    }
+}
